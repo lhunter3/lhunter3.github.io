@@ -1,5 +1,4 @@
 import './style.css';
-import { initSmoothScroll } from './lib/smoothScroll.js';
 import { initReveal } from './lib/reveal.js';
 import { initNav } from './lib/nav.js';
 import { initCounters } from './lib/counters.js';
@@ -7,7 +6,6 @@ import { initTilt } from './lib/tilt.js';
 import { initHeroBackground } from './lib/heroBackground.js';
 
 function init() {
-  initSmoothScroll();
   initNav();
   initReveal();
   initCounters();
