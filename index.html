@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#06070b" />
+    <meta name="theme-color" content="#0a0a0b" />
+
+    <!-- Flag JS synchronously so reveal content is hidden from first paint
+         (with JS) yet stays visible if JS is disabled or slow to load. -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <!-- Critical paint styles: keep any pre-stylesheet frame dark, never a white flash. -->
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html {
+        background: #0a0a0b;
+      }
+      body {
+        margin: 0;
+        background: #0a0a0b;
+        color: #ededf0;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+      }
+    </style>
 
     <title>Lucas Hunter — Software & Integration Developer</title>
     <meta

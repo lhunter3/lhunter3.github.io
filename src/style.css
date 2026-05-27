@@ -71,7 +71,7 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.001ms !important;
     }
-    .reveal {
+    html.js .reveal {
       opacity: 1 !important;
       transform: none !important;
     }
@@ -274,7 +274,8 @@
 /* ---------------------------------------------------------------------------
    Reveal-on-scroll (snappy)
 --------------------------------------------------------------------------- */
-.reveal {
+/* Only hide reveal content when JS is present — otherwise it stays visible. */
+html.js .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition:
@@ -282,7 +283,7 @@
     transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
 }
-.reveal.is-visible {
+html.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
