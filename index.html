@@ -1,391 +1,641 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#06070b" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lucas Hunter — Software & Integration Developer</title>
+    <meta
+      name="description"
+      content="Lucas Hunter is a software and integration developer in Fredericton, Canada, building mission-critical, production-grade systems in Java, C# and the cloud."
+    />
+    <meta name="author" content="Lucas Hunter" />
+    <link rel="canonical" href="https://lucashunter.ca/" />
 
-  <title>Lucas Hunter</title>
-  <meta content="Get to know Lucas Hunter" name="description">
-  <meta
-    content="Lucas Hunter, Software Developer, New Grad, University New Brunswick, Computer Science, Programming, Development, Lucas, Hunter"
-    name="keywords">
+    <!-- Icons & manifest -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-  <link rel="apple-touch-icon" sizes="128x128" href="assets/images/logo-white-128.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo-white-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo-white-16.png">
-  <link rel="manifest" href="assets/manifest/manifest.json">
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lucashunter.ca/" />
+    <meta property="og:title" content="Lucas Hunter — Software & Integration Developer" />
+    <meta
+      property="og:description"
+      content="Building mission-critical, production-grade software in Java, C# and the cloud."
+    />
+    <meta property="og:image" content="https://lucashunter.ca/img/lucas.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lucas Hunter — Software & Integration Developer" />
+    <meta
+      name="twitter:description"
+      content="Building mission-critical, production-grade software in Java, C# and the cloud."
+    />
+    <meta name="twitter:image" content="https://lucashunter.ca/img/lucas.jpg" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lucas Hunter",
+        "jobTitle": "Integration Developer",
+        "url": "https://lucashunter.ca",
+        "image": "https://lucashunter.ca/img/lucas.jpg",
+        "email": "mailto:lucasbhunter@gmail.com",
+        "worksFor": { "@type": "Organization", "name": "J.D. Irving, Limited" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of New Brunswick" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fredericton",
+          "addressRegion": "NB",
+          "addressCountry": "Canada"
+        },
+        "knowsLanguage": ["en", "fr"],
+        "sameAs": [
+          "https://github.com/lhunter3",
+          "https://www.linkedin.com/in/lhunter3/"
+        ]
+      }
+    </script>
+  </head>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
+  <body>
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+      >Skip to content</a
+    >
 
-<body>
+    <!-- Scroll progress -->
+    <div
+      data-scroll-progress
+      class="fixed left-0 top-0 z-[60] h-0.5 w-full origin-left scale-x-0 bg-gradient-to-r from-accent via-accent-2 to-accent-3"
+    ></div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
+    <!-- ===================== Header ===================== -->
+    <header
+      data-header
+      class="fixed inset-x-0 top-0 z-50 transition-all duration-300 data-[scrolled=true]:border-b data-[scrolled=true]:border-line/80 data-[scrolled=true]:bg-ink/70 data-[scrolled=true]:backdrop-blur-xl"
+    >
+      <div class="container-x flex h-16 items-center justify-between sm:h-20">
+        <a href="#hero" class="flex items-center gap-2" aria-label="Lucas Hunter — home">
+          <span class="text-lg font-semibold tracking-tight">Lucas Hunter</span>
+        </a>
 
-      <!--<h1 class="logo"><a href="index.html">Lucas Hunter</a></h1> -->
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo"><img src="assets/images/logo-no-background.png" alt="" class="img-fluid"></a>
+        <nav class="hidden items-center gap-8 md:flex" aria-label="Primary">
+          <a href="#experience" data-nav-link class="nav-link">Experience</a>
+          <a href="#skills" data-nav-link class="nav-link">Skills</a>
+          <a href="#work" data-nav-link class="nav-link">Work</a>
+          <a href="#about" data-nav-link class="nav-link">About</a>
+          <a href="#contact" class="btn-ghost !px-5 !py-2">Contact</a>
+        </nav>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto " href="#work">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <button
+          data-menu-toggle
+          class="md:hidden"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-fg">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
 
-    </div>
-  </header><!-- End Header -->
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        data-mobile-menu
+        data-open="false"
+        class="grid grid-rows-[0fr] overflow-hidden border-line bg-ink/95 backdrop-blur-xl transition-[grid-template-rows] duration-300 data-[open=true]:grid-rows-[1fr] data-[open=true]:border-b md:hidden"
+      >
+        <nav class="min-h-0 overflow-hidden" aria-label="Mobile">
+          <div class="container-x flex flex-col gap-1 py-4 text-base">
+            <a href="#experience" class="rounded-lg px-2 py-3 text-muted hover:bg-white/5 hover:text-fg">Experience</a>
+            <a href="#skills" class="rounded-lg px-2 py-3 text-muted hover:bg-white/5 hover:text-fg">Skills</a>
+            <a href="#work" class="rounded-lg px-2 py-3 text-muted hover:bg-white/5 hover:text-fg">Work</a>
+            <a href="#about" class="rounded-lg px-2 py-3 text-muted hover:bg-white/5 hover:text-fg">About</a>
+            <a href="#contact" class="rounded-lg px-2 py-3 text-muted hover:bg-white/5 hover:text-fg">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-  <!-- ======= Hero Section ======= -->
-  <div id="title" class="hero">
-    <div class="overlay-mf"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <p class="display-6 color-d">Hello I am</p>
-          <h1 class="hero-title mb-4">Lucas Hunter</h1>
-          <p class="hero-subtitle"><span class="typed"
-              data-typed-items="Software Developer, New Grad, Java, C#, Object-Oriented Programming"></span>
+    <main id="main">
+      <!-- ===================== Hero ===================== -->
+      <section
+        id="hero"
+        data-hero
+        class="relative flex min-h-[100svh] items-center overflow-hidden"
+      >
+        <!-- Aurora background -->
+        <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+          <div
+            data-parallax="34"
+            class="aurora-blob absolute -left-[10%] top-[8%] h-[42rem] w-[42rem] rounded-full opacity-50 blur-[120px]"
+            style="background: radial-gradient(circle, #5b8cff 0%, transparent 60%)"
+          ></div>
+          <div
+            data-parallax="-26"
+            class="aurora-blob absolute right-[-8%] top-[20%] h-[36rem] w-[36rem] rounded-full opacity-40 blur-[120px]"
+            style="background: radial-gradient(circle, #9b6bff 0%, transparent 60%); --aurora-duration: 22s"
+          ></div>
+          <div
+            data-parallax="18"
+            class="aurora-blob absolute bottom-[-12%] left-[28%] h-[34rem] w-[34rem] rounded-full opacity-30 blur-[120px]"
+            style="background: radial-gradient(circle, #34e0ff 0%, transparent 60%); --aurora-duration: 26s"
+          ></div>
+          <!-- grain / vignette -->
+          <div
+            class="absolute inset-0"
+            style="background: radial-gradient(120% 120% at 50% 0%, transparent 40%, #06070b 100%)"
+          ></div>
+        </div>
+
+        <div data-hero-content class="container-x pt-28 pb-20">
+          <p class="reveal eyebrow">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-accent"></span>
+            Fredericton, Canada · Available for new work
           </p>
+
+          <h1 class="reveal mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.02] tracking-tight sm:text-7xl lg:text-[5.5rem]">
+            <span class="text-gradient">Engineering software</span><br />
+            that has to <span class="text-accent-gradient">work.</span>
+          </h1>
+
+          <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-muted">
+            I'm <span class="text-fg">Lucas Hunter</span> — a software &amp; integration developer
+            shipping mission-critical systems, from Canada's next-generation naval fleet to
+            full-stack products and open-source tools.
+          </p>
+
+          <div class="reveal mt-9 flex flex-wrap items-center gap-4">
+            <a href="#work" class="btn-primary">
+              View my work
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn-ghost">Get in touch</a>
+          </div>
+
+          <div class="reveal mt-10 flex items-center gap-5 text-muted">
+            <a href="https://github.com/lhunter3" target="_blank" rel="noopener" class="transition-colors hover:text-fg" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7 0-.7 0-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.5 18 4.8 18 4.8c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/lhunter3/" target="_blank" rel="noopener" class="transition-colors hover:text-fg" aria-label="LinkedIn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0Z"/></svg>
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <main id="main">
+        <!-- Scroll cue -->
+        <a
+          href="#stats"
+          class="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-faint sm:flex"
+          aria-label="Scroll down"
+        >
+          <span class="text-[11px] uppercase tracking-[0.25em]">Scroll</span>
+          <svg class="scroll-cue" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </section>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/lucas.png" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
+      <!-- ===================== Stats ===================== -->
+      <section id="stats" class="border-y border-line/60 bg-ink-2/40">
+        <div class="container-x py-14">
+          <dl data-reveal-group="120" class="grid grid-cols-2 gap-y-10 sm:gap-x-8 lg:grid-cols-4">
+            <div class="reveal text-center sm:text-left">
+              <dt class="text-4xl font-semibold tracking-tight sm:text-5xl">
+                <span data-count-to="3" data-count-suffix="+">0</span>
+              </dt>
+              <dd class="mt-2 text-sm text-muted">Years shipping production software</dd>
+            </div>
+            <div class="reveal text-center sm:text-left">
+              <dt class="text-4xl font-semibold tracking-tight sm:text-5xl">
+                <span data-count-to="3">0</span>
+              </dt>
+              <dd class="mt-2 text-sm text-muted">Companies &amp; engineering teams</dd>
+            </div>
+            <div class="reveal text-center sm:text-left">
+              <dt class="text-4xl font-semibold tracking-tight sm:text-5xl">
+                <span data-count-to="22">0</span>
+              </dt>
+              <dd class="mt-2 text-sm text-muted">GitHub stars on open-source work</dd>
+            </div>
+            <div class="reveal text-center sm:text-left">
+              <dt class="text-4xl font-semibold tracking-tight sm:text-5xl">
+                <span data-count-to="4">0</span>
+              </dt>
+              <dd class="mt-2 text-sm text-muted">Developers onboarded &amp; mentored</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ===================== Experience ===================== -->
+      <section id="experience" class="section">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <p class="eyebrow">Track record</p>
+            <h2 class="heading mt-4">Where I've made an impact</h2>
+            <p class="mt-5 text-lg text-muted">
+              Three years building production software across defence, industrial, and
+              client-facing teams — from naval fleet integrations to full-stack web platforms.
+            </p>
+          </div>
+
+          <div class="mt-16">
+            <!-- J.D. Irving (featured) -->
+            <article class="reveal group relative">
+              <div class="card border-accent/30 bg-gradient-to-b from-surface/90 to-surface/50 p-7 sm:p-9">
+                <div
+                  class="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-70"
+                ></div>
+                <div class="flex flex-wrap items-start justify-between gap-4">
+                  <div>
+                    <div class="flex items-center gap-3">
+                      <span class="chip border-accent/40 !text-accent">Current role</span>
+                      <span class="text-sm text-faint">Sep 2024 — Present</span>
                     </div>
+                    <h3 class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+                      Integration Developer
+                    </h3>
+                    <p class="mt-1 text-lg text-accent">J.D. Irving, Limited</p>
                   </div>
-
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="title-s">Autobiography</p>
-                    <p>
-                      Lucas Hunter is a recent Computer Science graduate with nearly two years of professional experience.
-                      Specializing in <b>Java</b>, <b>C#</b> and <b>Object-Oriented Programming</b>, he is actively seeking
-                      full-time employment as a Software Development Engineer.
-                      Lucas resides in New Brunswick, having fulfilled the requirements for a Bachelor's degree in
-                      Computer Science at the University of New Brunswick.</p>
+                  <div class="flex items-center gap-2 rounded-xl border border-line-2 bg-white/[0.03] px-3 py-2 text-xs text-muted">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-accent-3">
+                      <path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Controlled Goods Clearance · 2024–2029
                   </div>
-
                 </div>
-                <div class="col-md-6">
-                  <div class="skill-mf">
-                    <p class="title-s">Technical Skills</p>
-                    <span>C#, Java, OOP</span> <span class="pull-right"></span>
-                  
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>MySQL, NoSQL</span> <span class="pull-right"></span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JavaScript, React, Python</span> <span class="pull-right"></span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
+
+                <ul class="mt-6 space-y-3 text-muted">
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                    <span>Engineer mission-critical integrations for the <span class="text-fg">Canadian Surface Combatant</span>
+                    program — connecting manufacturing, enterprise, and onboard naval subsystems for Canada's
+                    next-generation River-Class Destroyer fleet.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                    <span>Selected on technical merit as the <span class="text-fg">sole junior developer</span> on a
+                    cross-organizational engineering team, delivering proprietary solutions across the CSC and AOPS programs.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                    <span>Led Irving Shipbuilding's <span class="text-fg">IBM webMethods platform migration</span>, bringing
+                    end-of-support infrastructure to federal compliance with zero operational downtime — recognized as
+                    JDIIT Employee of the Week.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                    <span>Architected and deployed <span class="text-fg">algorithm-agnostic cryptographic utilities</span>
+                    securing data exchange across outbound CSC integrations.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                    <span>Earned code-reviewer and change-agent responsibilities; onboarded and mentored four new developers.</span>
+                  </li>
+                </ul>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                  <span class="chip">Java</span>
+                  <span class="chip">webMethods</span>
+                  <span class="chip">SQL</span>
+                  <span class="chip">Git</span>
+                  <span class="chip">Azure DevOps</span>
                 </div>
+              </div>
+            </article>
+
+            <!-- Secondary roles -->
+            <div data-reveal-group="120" class="mt-6 grid gap-6 lg:grid-cols-2">
+              <article class="reveal card">
+                <div class="flex items-center gap-3">
+                  <span class="text-sm text-faint">May 2023 — Sep 2023</span>
+                </div>
+                <h3 class="mt-3 text-xl font-semibold tracking-tight">Software Developer</h3>
+                <p class="mt-1 text-accent">C-Therm Technologies</p>
+                <ul class="mt-5 space-y-3 text-sm text-muted">
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70"></span>
+                    Built an automated thermal-sensing system integrating industrial SCADA controllers with real-time
+                    data acquisition, configurable sensor arrays, and secure data pipelines.
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70"></span>
+                    Built a CI/CD automation pipeline from the ground up with PowerShell, YAML, and Bitbucket — cutting
+                    deployment time and eliminating manual release errors.
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70"></span>
+                    Translated thermodynamic requirements into production features with hardware engineers in an Agile workflow.
+                  </li>
+                </ul>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="chip">C#</span>
+                  <span class="chip">.NET</span>
+                  <span class="chip">SQL</span>
+                  <span class="chip">PowerShell</span>
+                  <span class="chip">Bitbucket</span>
+                </div>
+              </article>
+
+              <article class="reveal card">
+                <div class="flex items-center gap-3">
+                  <span class="text-sm text-faint">May 2022 — Feb 2023</span>
+                </div>
+                <h3 class="mt-3 text-xl font-semibold tracking-tight">Junior Software Developer</h3>
+                <p class="mt-1 text-accent">The Barrington Consulting Group</p>
+                <ul class="mt-5 space-y-3 text-sm text-muted">
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70"></span>
+                    Delivered full-stack web solutions — maintainable backends in Java 11, Spring Boot, Hibernate and
+                    MySQL with responsive React frontends.
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70"></span>
+                    Implemented RESTful APIs to client specifications, validated with Postman, Swagger, and JUnit.
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70"></span>
+                    Coordinated feature delivery across multiple concurrent client projects in an Agile sprint cadence.
+                  </li>
+                </ul>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="chip">Java</span>
+                  <span class="chip">Spring Boot</span>
+                  <span class="chip">React</span>
+                  <span class="chip">Hibernate</span>
+                  <span class="chip">MySQL</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Skills ===================== -->
+      <section id="skills" class="section bg-ink-2/40">
+        <div class="container-x">
+          <div class="reveal max-w-2xl">
+            <p class="eyebrow">Toolbox</p>
+            <h2 class="heading mt-4">Languages &amp; technologies</h2>
+            <p class="mt-5 text-lg text-muted">
+              The stack I reach for across back-end services, integrations, and full-stack delivery.
+            </p>
+          </div>
+
+          <div data-reveal-group="120" class="mt-14 grid gap-6 md:grid-cols-3">
+            <div class="reveal card">
+              <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Languages</h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="chip">Java</span>
+                <span class="chip">C#</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Python</span>
+                <span class="chip">SQL</span>
+                <span class="chip">PowerShell</span>
+              </div>
+            </div>
+            <div class="reveal card">
+              <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Frameworks &amp; Platforms</h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="chip">Spring Boot</span>
+                <span class="chip">.NET</span>
+                <span class="chip">Entity Framework</span>
+                <span class="chip">React</span>
+                <span class="chip">Hibernate</span>
+                <span class="chip">webMethods</span>
+                <span class="chip">RESTful APIs</span>
+              </div>
+            </div>
+            <div class="reveal card">
+              <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Tools &amp; DevOps</h3>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="chip">Azure DevOps</span>
+                <span class="chip">Git</span>
+                <span class="chip">Maven</span>
+                <span class="chip">Postman</span>
+                <span class="chip">Swagger</span>
+                <span class="chip">JUnit</span>
+                <span class="chip">Jira</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section><!-- End About Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Recent Projects
-              </h3>
-              <p class="subtitle-a">
-                Browse my recently completed projects!
+        <!-- marquee -->
+        <div class="marquee relative mt-14 flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)]">
+          <div class="marquee-track flex shrink-0 items-center gap-10 pr-10 text-lg font-medium text-faint">
+            <span>Java</span><span aria-hidden="true">·</span><span>C#</span><span aria-hidden="true">·</span><span>Spring Boot</span><span aria-hidden="true">·</span><span>.NET</span><span aria-hidden="true">·</span><span>webMethods</span><span aria-hidden="true">·</span><span>React</span><span aria-hidden="true">·</span><span>SQL</span><span aria-hidden="true">·</span><span>Azure DevOps</span><span aria-hidden="true">·</span><span>Python</span><span aria-hidden="true">·</span><span>RESTful APIs</span><span aria-hidden="true">·</span>
+          </div>
+          <div class="marquee-track flex shrink-0 items-center gap-10 pr-10 text-lg font-medium text-faint" aria-hidden="true">
+            <span>Java</span><span>·</span><span>C#</span><span>·</span><span>Spring Boot</span><span>·</span><span>.NET</span><span>·</span><span>webMethods</span><span>·</span><span>React</span><span>·</span><span>SQL</span><span>·</span><span>Azure DevOps</span><span>·</span><span>Python</span><span>·</span><span>RESTful APIs</span><span>·</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Work / Projects ===================== -->
+      <section id="work" class="section">
+        <div class="container-x">
+          <div class="reveal flex flex-wrap items-end justify-between gap-6">
+            <div class="max-w-2xl">
+              <p class="eyebrow">Open source</p>
+              <h2 class="heading mt-4">Things I've built in the open</h2>
+              <p class="mt-5 text-lg text-muted">
+                Side projects shipped publicly — gaming tools and systems software, written and maintained on GitHub.
               </p>
-              <div class="line-mf"></div>
+            </div>
+            <a href="https://github.com/lhunter3" target="_blank" rel="noopener" class="btn-ghost">
+              All repositories
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div data-reveal-group="130" class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <!-- HNS-Freeze (featured) -->
+            <a
+              href="https://github.com/lhunter3/HNS-Freeze"
+              target="_blank"
+              rel="noopener"
+              data-tilt
+              class="card reveal flex flex-col hover:border-accent/40 md:col-span-2 lg:col-span-1"
+            >
+              <div class="flex items-center justify-between">
+                <span class="chip border-accent/40 !text-accent">Featured</span>
+                <span class="inline-flex items-center gap-1.5 text-sm text-muted">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="text-amber-400"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+                  22
+                </span>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold tracking-tight">HNS-Freeze</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                A CounterStrikeSharp plugin bringing fully-configurable freeze mechanics to Hide-and-Seek and Zombie
+                Escape servers in CS2 — JSON-tunable freeze duration, blast radius, and team effects.
+              </p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="chip">C#</span>
+                <span class="inline-flex items-center gap-1.5 text-sm text-accent">
+                  View on GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Strafe-Optimizer -->
+            <a
+              href="https://github.com/lhunter3/Strafe-Optimizer"
+              target="_blank"
+              rel="noopener"
+              data-tilt
+              class="card reveal flex flex-col hover:border-accent/40"
+            >
+              <div class="flex items-center justify-between">
+                <span class="chip">Tooling</span>
+                <span class="inline-flex items-center gap-1.5 text-sm text-muted">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="text-amber-400"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+                  4
+                </span>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold tracking-tight">Strafe-Optimizer</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                Enhances player movement precision by generating perfectly accurate strafes — an exercise in tight,
+                deterministic motion algorithms.
+              </p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="chip">C#</span>
+                <span class="inline-flex items-center gap-1.5 text-sm text-accent">
+                  View on GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- simpledb-timeseries -->
+            <a
+              href="https://github.com/lhunter3/simpledb-timeseries"
+              target="_blank"
+              rel="noopener"
+              data-tilt
+              class="card reveal flex flex-col hover:border-accent/40"
+            >
+              <div class="flex items-center justify-between">
+                <span class="chip">Systems</span>
+                <span class="text-sm text-faint">Java</span>
+              </div>
+              <h3 class="mt-4 text-xl font-semibold tracking-tight">simpledb-timeseries</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                A database engine written from scratch in Java with a native time-series datatype — a deep dive into
+                storage, indexing, and query internals.
+              </p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="chip">Java</span>
+                <span class="inline-flex items-center gap-1.5 text-sm text-accent">
+                  View on GitHub
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== About ===================== -->
+      <section id="about" class="section bg-ink-2/40">
+        <div class="container-x grid items-center gap-12 lg:grid-cols-[0.85fr_1fr]">
+          <div class="reveal relative mx-auto max-w-sm lg:mx-0">
+            <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-accent/20 via-accent-2/10 to-transparent blur-2xl"></div>
+            <img
+              src="/img/lucas.jpg"
+              alt="Portrait of Lucas Hunter"
+              width="900"
+              height="1200"
+              loading="lazy"
+              class="w-full rounded-3xl border border-line-2 object-cover shadow-2xl"
+            />
+          </div>
+
+          <div class="reveal">
+            <p class="eyebrow">About</p>
+            <h2 class="heading mt-4">Hi, I'm Lucas.</h2>
+            <div class="mt-5 space-y-4 text-lg leading-relaxed text-muted">
+              <p>
+                I'm a software and integration developer based in Fredericton, New Brunswick. I like problems where
+                correctness matters — secure data exchange, systems that can't go down, and code that holds up under
+                real-world load.
+              </p>
+              <p>
+                Today I build naval-fleet integrations at <span class="text-fg">J.D. Irving</span>. Before that I
+                shipped industrial automation at C-Therm and full-stack products in consulting. Off the clock, I write
+                open-source tools and dig into systems internals for fun.
+              </p>
+            </div>
+
+            <dl class="mt-8 grid grid-cols-2 gap-6 border-t border-line pt-8 text-sm sm:grid-cols-3">
+              <div>
+                <dt class="text-faint">Education</dt>
+                <dd class="mt-1 text-fg">B.C.S., University of New Brunswick</dd>
+              </div>
+              <div>
+                <dt class="text-faint">Languages</dt>
+                <dd class="mt-1 text-fg">English &amp; Français</dd>
+              </div>
+              <div>
+                <dt class="text-faint">Based in</dt>
+                <dd class="mt-1 text-fg">Fredericton, Canada</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Contact ===================== -->
+      <section id="contact" class="section">
+        <div class="container-x">
+          <div class="reveal relative overflow-hidden rounded-[2rem] border border-line bg-surface/60 px-6 py-16 text-center sm:px-12 sm:py-24">
+            <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+              <div class="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full opacity-40 blur-[100px]" style="background: radial-gradient(circle, #5b8cff, transparent 60%)"></div>
+            </div>
+            <p class="eyebrow justify-center">Contact</p>
+            <h2 class="heading mx-auto mt-4 max-w-2xl">Let's build something that lasts.</h2>
+            <p class="mx-auto mt-5 max-w-xl text-lg text-muted">
+              Open to new opportunities and interesting problems. The fastest way to reach me is email.
+            </p>
+            <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+              <a href="mailto:lucasbhunter@gmail.com" class="btn-primary">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                lucasbhunter@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/lhunter3/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+              <a href="https://github.com/lhunter3" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
             </div>
           </div>
         </div>
-        <div class="row">
+      </section>
+    </main>
 
-
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/code.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/code.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">React Web Application </h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">React, JavaScript</span> / <span class="w-date">June 2024</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="/tourism-clone"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/code.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/code.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Open-Source Game Server Plugin</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">C#, Open-Source Development</span> / <span class="w-date">January 2024</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="https://github.com/lhunter3/HNS-Freeze"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/azamat-e-eb1cgnNIazI-unsplash.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/azamat-e-eb1cgnNIazI-unsplash.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Android Application </h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Kotlin, Google Cloud, API</span> / <span class="w-date">20
-                        December. 2023</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="Android-Application.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/nasa-Q1p7bh3SHj8-unsplash.jpg" data-gallery="portfolioGallery"
-                class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/nasa-Q1p7bh3SHj8-unsplash.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Java Database</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Java, Database Development, SQL</span> / <span class="w-date">15
-                        December. 2023</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="Timeseries-Database.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/Fotor_AI（2）.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/Fotor_AI（2）.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Discord Chatbot</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Development, Chatbot Development & Networking</span> / <span
-                        class="w-date">7
-                        April. 2023</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="resuscan.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          
-
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/music.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/music.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Spotify Media Player</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Java, JavaFX</span> / <span class="w-date">Dec. 2022</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="Spotify-Media-Player.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
+    <!-- ===================== Footer ===================== -->
+    <footer class="border-t border-line/60">
+      <div class="container-x flex flex-col items-center justify-between gap-4 py-10 text-sm text-faint sm:flex-row">
+        <p>© <span data-year>2026</span> Lucas Hunter · Fredericton, Canada</p>
+        <div class="flex items-center gap-6">
+          <a href="https://github.com/lhunter3" target="_blank" rel="noopener" class="transition-colors hover:text-fg">GitHub</a>
+          <a href="https://www.linkedin.com/in/lhunter3/" target="_blank" rel="noopener" class="transition-colors hover:text-fg">LinkedIn</a>
+          <a href="mailto:lucasbhunter@gmail.com" class="transition-colors hover:text-fg">Email</a>
         </div>
       </div>
-    </section><!-- End Portfolio Section -->
+    </footer>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span>Fredericton, New Brunswick, Canada</li>
-                        <li><span class="bi bi-phone"></span><a href="tel:506-478-4119">(506) 478-4119</a></li>
-                        <li><span class="bi bi-envelope"></span> <a
-                            href="mailto:lucasbhunter@gmail.com">lucasbhunter@gmail.com</a></li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="https://github.com/lhunter3"><span class="ico-circle"><i
-                                class="bi bi-github"></i></span></a></li>
-                        <li><a href="https://www.instagram.com/esglucy/"><span class="ico-circle"><i
-                                class="bi bi-instagram"></i></span></a></li>
-                        <li><a href="https://www.linkedin.com/in/lhunter3/"><span class="ico-circle"><i
-                                class="bi bi-linkedin"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Section -->
-
-  </main><!-- End #main -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

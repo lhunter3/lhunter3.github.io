@@ -1,0 +1,14 @@
+{
+  "name": "Lucas Hunter",
+  "short_name": "Lucas Hunter",
+  "description": "Software & integration developer in Fredericton, Canada.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06070b",
+  "theme_color": "#06070b",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/favicon-16.png", "sizes": "16x16", "type": "image/png" }
+  ]
+}
