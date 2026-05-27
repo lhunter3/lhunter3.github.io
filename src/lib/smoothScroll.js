@@ -8,9 +8,10 @@ export function initSmoothScroll() {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return null;
 
+  // Light lerp = snappy, frame-rate-independent smoothing (not floaty).
   const lenis = new Lenis({
-    duration: 1.1,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    lerp: 0.12,
+    wheelMultiplier: 1,
     smoothWheel: true,
   });
 

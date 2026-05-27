@@ -70,6 +70,20 @@
       >Skip to content</a
     >
 
+    <!-- Ambient background: grid + drifting light + film grain -->
+    <div class="bg-stage" aria-hidden="true">
+      <div class="layer-grid"></div>
+      <div
+        class="layer-glow"
+        style="top: -16%; left: 6%; width: 46rem; height: 46rem; opacity: 0.06; background: radial-gradient(circle, #fff, transparent 60%); animation: drift 34s ease-in-out infinite"
+      ></div>
+      <div
+        class="layer-glow"
+        style="bottom: -12%; right: 4%; width: 40rem; height: 40rem; opacity: 0.045; background: radial-gradient(circle, #fff, transparent 60%); animation: drift 46s ease-in-out infinite reverse"
+      ></div>
+      <div class="layer-grain"></div>
+    </div>
+
     <!-- Scroll progress -->
     <div
       data-scroll-progress
@@ -133,39 +147,37 @@
         data-hero
         class="relative flex min-h-[100svh] items-center overflow-hidden"
       >
-        <!-- Aurora background -->
-        <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <!-- Hero light: top spotlight + parallax glows + vignette (no blur filters) -->
+        <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+          <div
+            class="absolute left-1/2 top-[-28%] h-[52rem] w-[78rem] -translate-x-1/2"
+            style="background: radial-gradient(closest-side, rgba(255, 255, 255, 0.17), transparent 70%)"
+          ></div>
           <div
             data-parallax="34"
-            class="aurora-blob absolute -left-[10%] top-[8%] h-[42rem] w-[42rem] rounded-full opacity-50 blur-[120px]"
-            style="background: radial-gradient(circle, #5b8cff 0%, transparent 60%)"
+            class="layer-glow absolute"
+            style="left: -6%; top: 4%; width: 34rem; height: 34rem; opacity: 0.08; background: radial-gradient(circle, #fff, transparent 60%); animation: drift 30s ease-in-out infinite"
           ></div>
           <div
-            data-parallax="-26"
-            class="aurora-blob absolute right-[-8%] top-[20%] h-[36rem] w-[36rem] rounded-full opacity-40 blur-[120px]"
-            style="background: radial-gradient(circle, #9b6bff 0%, transparent 60%); --aurora-duration: 22s"
+            data-parallax="-24"
+            class="layer-glow absolute"
+            style="right: -4%; top: 14%; width: 30rem; height: 30rem; opacity: 0.06; background: radial-gradient(circle, #fff, transparent 60%); animation: drift 38s ease-in-out infinite reverse"
           ></div>
-          <div
-            data-parallax="18"
-            class="aurora-blob absolute bottom-[-12%] left-[28%] h-[34rem] w-[34rem] rounded-full opacity-30 blur-[120px]"
-            style="background: radial-gradient(circle, #34e0ff 0%, transparent 60%); --aurora-duration: 26s"
-          ></div>
-          <!-- grain / vignette -->
           <div
             class="absolute inset-0"
-            style="background: radial-gradient(120% 120% at 50% 0%, transparent 40%, #06070b 100%)"
+            style="background: radial-gradient(120% 95% at 50% 0%, transparent 45%, var(--color-ink) 100%)"
           ></div>
         </div>
 
         <div data-hero-content class="container-x pt-28 pb-20">
           <p class="reveal eyebrow">
-            <span class="inline-block h-1.5 w-1.5 rounded-full bg-accent"></span>
+            <span class="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-pop"></span>
             Fredericton, Canada · Available for new work
           </p>
 
           <h1 class="reveal mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.02] tracking-tight sm:text-7xl lg:text-[5.5rem]">
             <span class="text-gradient">Engineering software</span><br />
-            that has to <span class="text-accent-gradient">work.</span>
+            that has to <span class="text-shimmer">work.</span>
           </h1>
 
           <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-muted">
@@ -261,7 +273,7 @@
                 <div class="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <div class="flex items-center gap-3">
-                      <span class="chip border-accent/40 !text-accent">Current role</span>
+                      <span class="chip-pop">Current role</span>
                       <span class="text-sm text-faint">Sep 2024 — Present</span>
                     </div>
                     <h3 class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -270,7 +282,7 @@
                     <p class="mt-1 text-lg text-accent">J.D. Irving, Limited</p>
                   </div>
                   <div class="flex items-center gap-2 rounded-xl border border-line-2 bg-white/[0.03] px-3 py-2 text-xs text-muted">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-accent-3">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-pop">
                       <path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
                       <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -472,9 +484,9 @@
               class="card reveal flex flex-col hover:border-accent/40 md:col-span-2 lg:col-span-1"
             >
               <div class="flex items-center justify-between">
-                <span class="chip border-accent/40 !text-accent">Featured</span>
+                <span class="chip-pop">Featured</span>
                 <span class="inline-flex items-center gap-1.5 text-sm text-muted">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="text-amber-400"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="text-pop"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
                   22
                 </span>
               </div>
@@ -503,7 +515,7 @@
               <div class="flex items-center justify-between">
                 <span class="chip">Tooling</span>
                 <span class="inline-flex items-center gap-1.5 text-sm text-muted">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="text-amber-400"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" class="text-pop"><path d="m12 2 2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 20.5l1.4-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
                   4
                 </span>
               </div>
@@ -604,7 +616,7 @@
         <div class="container-x">
           <div class="reveal relative overflow-hidden rounded-[2rem] border border-line bg-surface/60 px-6 py-16 text-center sm:px-12 sm:py-24">
             <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-              <div class="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full opacity-40 blur-[100px]" style="background: radial-gradient(circle, #5b8cff, transparent 60%)"></div>
+              <div class="absolute left-1/2 top-0 h-80 w-[40rem] -translate-x-1/2 opacity-50" style="background: radial-gradient(closest-side, rgba(255, 255, 255, 0.14), transparent 70%)"></div>
             </div>
             <p class="eyebrow justify-center">Contact</p>
             <h2 class="heading mx-auto mt-4 max-w-2xl">Let's build something that lasts.</h2>

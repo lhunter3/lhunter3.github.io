@@ -1,6 +1,7 @@
 /**
  * Header behaviour: condense-on-scroll, scroll-progress bar, active-section
- * highlighting, and the mobile menu toggle.
+ * highlighting, and the mobile menu toggle. Scroll work is rAF-batched and
+ * reads layout metrics only on resize to avoid per-frame reflow.
  */
 export function initNav() {
   const header = document.querySelector('[data-header]');
@@ -9,18 +10,29 @@ export function initNav() {
   const menuToggle = document.querySelector('[data-menu-toggle]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
 
-  const onScroll = () => {
+  let maxScroll = 1;
+  const measure = () => {
+    maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+  };
+  measure();
+  window.addEventListener('resize', measure, { passive: true });
+  window.addEventListener('load', measure);
+
+  let raf = 0;
+  const update = () => {
+    raf = 0;
     const y = window.scrollY;
     if (header) header.dataset.scrolled = String(y > 24);
-
-    if (progress) {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = max > 0 ? (y / max) * 100 : 0;
-      progress.style.transform = `scaleX(${pct / 100})`;
-    }
+    if (progress) progress.style.transform = `scaleX(${Math.min(y / maxScroll, 1)})`;
   };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  update();
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    },
+    { passive: true }
+  );
 
   // Active-section highlight
   const sections = links
@@ -49,6 +61,7 @@ export function initNav() {
       mobileMenu.dataset.open = String(open);
       menuToggle.setAttribute('aria-expanded', String(open));
       document.body.style.overflow = open ? 'hidden' : '';
+      measure();
     };
     menuToggle.addEventListener('click', () => {
       setOpen(mobileMenu.dataset.open !== 'true');
